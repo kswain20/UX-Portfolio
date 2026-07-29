@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katelyn.design — Digital Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__container">
+      <div class="nav__logo">Katelyn Guymon</div>
+      <nav class="nav__links">
+        <a href="#work">My Work</a>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero__title"><span class="hero__title--script">I'm Katelyn.</span><br>A digital product<br>designer.</h1>
+      <div class="hero__side">
+        <p class="hero__tagline">I deliver measurable results through strategy, traceable metrics, and data-driven decisions.</p>
+        <a href="#contact" class="btn btn--primary">Contact</a>
+      </div>
+    </section>
+
+    <section class="showcase">
+      <div class="showcase__container">
+        <div class="showcase__image-wrap">
+          <img src="assets/hero-photo.jpg" alt="Katelyn Swain, Digital Product Designer" class="showcase__image" />
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="projects">
+      <div class="section-heading">
+        <span class="pill">Featured Projects</span>
+        <h2>Always beginning with the <span class="accent">impact</span> in mind</h2>
+      </div>
+
+      <div class="projects__grid">
+        <a href="product-value.html" class="project-card project-card--link">
+          <div class="project-card__image project-card__image--1"></div>
+          <div class="project-card__body">
+            <h3>233% Increase in company sales through mobile app design</h3>
+            <p>A behind-the-scenes look at how building a mobile app procedure for installing products increased company revenue.</p>
+          </div>
+        </a>
+
+        <a href="lion-energy.html" class="project-card project-card--link">
+          <div class="project-card__image project-card__image--2"></div>
+          <div class="project-card__body">
+            <h3>Strategically building an app to boost product value</h3>
+            <p>Learn how research lead to a successful, modern, energy tracking app.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="reviews" style="display:none;"> <!-- hidden, restore by removing style -->
+      <div class="section-heading">
+        <span class="pill">REVIEWS</span>
+        <h2>What people say</h2>
+      </div>
+
+      <div class="reviews__grid">
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"Katelyn's attention to detail and user-centric approach transformed our product. The results speak for themselves."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"></div>
+            <div>
+              <p class="review-card__name">Sarah Johnson</p>
+              <p class="review-card__role">CEO, TechStart</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"Working with Katelyn was incredible. She delivered a design that exceeded expectations and drove real business impact."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"></div>
+            <div>
+              <p class="review-card__name">Michael Chen</p>
+              <p class="review-card__role">Product Manager, Lion Energy</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">"Katelyn brings both creative vision and analytical thinking. Her designs are beautiful and data-driven."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"></div>
+            <div>
+              <p class="review-card__name">Emily Rodriguez</p>
+              <p class="review-card__role">Director of UX, FinTech Co</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="about">
+      <div class="section-heading">
+        <span class="pill">About Me</span>
+        <h2>Designing the life I love</h2>
+      </div>
+      <div class="about__accordion">
+        <button class="about__panel about__panel--active" data-label="Travel Enthusiast" data-desc="Traveling allows me to embrace curiosity, experience different cultures, and continually broaden my perspective. My love for travel started with family road trips across the United States, and since moving out I've explored 11 countries. Norway is next on my bucket list!">
+          <img src="assets/about-me-photo-travel.png" alt="Katelyn traveling" class="about__panel-img">
+          <div class="about__panel-footer">
+            <div class="about__panel-content">
+              <p class="about__panel-title">Travel Enthusiast</p>
+              <p class="about__panel-desc">Traveling allows me to embrace curiosity, experience different cultures, and continually broaden my perspective. My love for travel started with family road trips across the United States, and since moving out I've explored 11 countries. Norway is next on my bucket list!</p>
+            </div>
+          </div>
+        </button>
+        <button class="about__panel" data-label="Happy Host" data-desc="My user centered thinking goes beyond computers. I love curating live experiences for friends and family to create fond memories of. I take special consideration for what guests need to feel comfortable and enjoy themselves.">
+          <img src="assets/about-me-photo-host.jpg" alt="Katelyn hosting" class="about__panel-img">
+          <div class="about__panel-footer">
+            <div class="about__panel-content">
+              <p class="about__panel-title">Happy Host</p>
+              <p class="about__panel-desc">My user centered thinking goes beyond computers. I love curating live experiences for friends and family to create fond memories of. I take special consideration for what guests need to feel comfortable and enjoy themselves.</p>
+            </div>
+          </div>
+        </button>
+        <button class="about__panel" data-label="Always Active" data-desc="Introducing myself to new physical challenges keeps me disciplined. It clears my mind to help me maintain focus on the other areas of my life. I exercise goal setting to complete long term objectives through small incremental steps.">
+          <img src="assets/about-me-photo-active.JPG" alt="Katelyn staying active" class="about__panel-img">
+          <div class="about__panel-footer">
+            <div class="about__panel-content">
+              <p class="about__panel-title">Always Active</p>
+              <p class="about__panel-desc">Introducing myself to new physical challenges keeps me disciplined. It clears my mind to help me maintain focus on the other areas of my life. I exercise goal setting to complete long term objectives through small incremental steps.</p>
+            </div>
+          </div>
+        </button>
+        <button class="about__panel" data-label="Photographer" data-desc="I started begging for my own camera when I was 7. Since then it has sharpened my attention to detail and storytelling abilities through visuals. This particular picture comes from my time in Bolivia where I helped an archeologist team document artifacts and ruins for an online catalog.">
+          <img src="assets/about-me-photo-cam.jpg" alt="Katelyn with camera" class="about__panel-img">
+          <div class="about__panel-footer">
+            <div class="about__panel-content">
+              <p class="about__panel-title">Skilled Photographer</p>
+              <p class="about__panel-desc">I started begging for my own camera when I was 7. Since then it has sharpened my attention to detail and storytelling abilities through visuals. This particular picture comes from my time in Bolivia where I helped an archeologist team document artifacts and ruins for an online catalog.</p>
+            </div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Passion Projects -->
+    <section class="passion">
+      <div class="section-heading">
+        <span class="pill">Passion Projects</span>
+        <h2>The &#8220;just for fun&#8221; section</h2>
+      </div>
+      <div class="passion__content">
+        <div class="passion__image">
+          <div class="passion__image-bg">
+            <img src="assets/image 12.png" alt="Passion project preview">
+          </div>
+        </div>
+        <div class="passion__copy">
+          <p class="passion__title">Travel Blog</p>
+          <p class="passion__body">I designed this site and then used AI to build into a functioning platform. The purpose was to share my travels with family and friends in real time. My goals was to be able to enjoy my trip to the fullest by reducing the number of people I had to check-in with separately, and to stay off of social media.</p>
+          <a href="https://the-scenic-route-ik.lovable.app/" class="btn btn--primary" target="_blank">View Site</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="contact__inner">
+        <div class="contact__left">
+          <span class="pill">Get In Touch</span>
+          <h2 class="contact__heading"><span class="contact__heading-gradient">Say hey!</span></h2>
+          <p class="contact__body">Whether you have a project in mind or just want to connect, I'd love to hear from you. Reach out if you are interested in:</p>
+          <ul class="contact__list">
+            <li class="contact__list-item">
+              <img src="check-icon.svg" class="contact__list-icon" alt="" />
+              <div>
+                <p class="contact__list-title">A discovery conversation</p>
+                <p class="contact__list-desc">Share your goals and I'll map out how design can make a measurable impact.</p>
+              </div>
+            </li>
+            <li class="contact__list-item">
+              <img src="check-icon.svg" class="contact__list-icon" alt="" />
+              <div>
+                <p class="contact__list-title">Tailored project scoping</p>
+                <p class="contact__list-desc">Get a clear sense of timeline, deliverables, and what working together looks like.</p>
+              </div>
+            </li>
+            <li class="contact__list-item">
+              <img src="check-icon.svg" class="contact__list-icon" alt="" />
+              <div>
+                <p class="contact__list-title">Research-backed solutions</p>
+                <p class="contact__list-desc">Every recommendation is grounded in data and user insights.</p>
+              </div>
+            </li>
+            <li class="contact__list-item">
+              <img src="check-icon.svg" class="contact__list-icon" alt="" />
+              <div>
+                <p class="contact__list-title">Ongoing collaboration</p>
+                <p class="contact__list-desc">Design doesn't stop at delivery — I'm invested in the outcome of every project.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="contact__right">
+          <div id="contact-success" style="display:none;background:#f0fdf4;border:1.5px solid #166534;border-radius:10px;padding:16px 20px;margin-bottom:16px;color:#166534;font-size:0.97rem;"></div>
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/mdaqbnpd" method="POST">
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label for="first-name">First name*</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Jane" required>
+              </div>
+              <div class="contact-form__field">
+                <label for="last-name">Last name*</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Doe" required>
+              </div>
+            </div>
+            <div class="contact-form__field">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="contact-form__field">
+              <label for="job-title">Job title</label>
+              <input type="text" id="job-title" name="job_title" placeholder="Product Manager">
+            </div>
+            <div class="contact-form__field">
+              <label for="message">What would you like to share with me?</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project, timeline, or anything else you'd like to share…" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary contact-form__submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+<script>
+  const form = document.getElementById('contact-form');
+  const successMsg = document.getElementById('contact-success');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = form.querySelector('#email').value;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        successMsg.textContent = `Message sent from ${email}`;
+        successMsg.style.display = 'block';
+        form.reset();
+        setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+      } else {
+        successMsg.textContent = 'Something went wrong. Please try again.';
+        successMsg.style.background = '#fef2f2';
+        successMsg.style.borderColor = '#fca5a5';
+        successMsg.style.color = '#991b1b';
+        successMsg.style.display = 'block';
+      }
+    } catch {
+      successMsg.textContent = 'Something went wrong. Please try again.';
+      successMsg.style.display = 'block';
+    }
+  });
+</script>
+</body>
+</html>

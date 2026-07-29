@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lion Energy Case Study | Katelyn.design</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Irish+Grover&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+
+/* ─── Reset & base ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #fff; color: #221b1a; }
+img { display: block; max-width: 100%; }
+
+/* ─── Nav ─── */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 73px;
+  padding: 0 32px;
+  border-bottom: 1px solid #e6e2e1;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(34,27,26,0.7);
+  text-decoration: none;
+}
+.nav__logo-icon { width: 20px; height: 20px; flex-shrink: 0; }
+.nav__links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  color: rgba(34,27,26,0.7);
+}
+.nav__links a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav__links a:hover { color: #21277c; }
+
+/* ─── Main container ─── */
+.case-study {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  width: 100%;
+  max-width: 1344px;
+  margin: 0 auto;
+}
+
+/* ─── Hero ─── */
+.cs-hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 55px;
+  width: calc(100% - 26px);
+  margin: 0 13px;
+  padding: 14px 49px 14px 0;
+  min-height: 593px;
+  overflow: hidden;
+  background: #fff;
+}
+.cs-hero__device {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 512px;
+  min-width: 512px;
+  height: 530px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #f9f8f8 0%, #f9f8f8 100%);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.cs-hero__device img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cs-hero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  max-width: 660px;
+}
+.cs-hero__stat-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: -15px;
+}
+.cs-hero__stat-row img {
+  width: 67px;
+  height: 67px;
+  flex-shrink: 0;
+}
+.cs-hero__stat {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #221b1a;
+  line-height: normal;
+  white-space: nowrap;
+}
+.cs-hero__heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: normal;
+  color: #221b1a;
+  margin-bottom: 12px;
+}
+.pill {
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  border-radius: 9999px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(34, 27, 26, 0.5);
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Meta bar ─── */
+.cs-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 26px);
+  margin: 0 13px;
+  padding: 14px 49px;
+  border: 1px solid #e6e2e1;
+  border-radius: 10px;
+  min-height: 106px;
+}
+.cs-meta__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 0;
+}
+.cs-meta__icon {
+  width: 46px;
+  height: 46px;
+  background: #f2f7ff;
+  border: 1px solid #dde9fc;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 11px;
+  flex-shrink: 0;
+}
+.cs-meta__icon img { width: 24px; height: 24px; }
+.cs-meta__text { display: flex; flex-direction: column; gap: 3px; }
+.cs-meta__label { font-size: 14px; font-weight: 400; color: #221b1a; }
+.cs-meta__value { font-size: 14px; font-weight: 400; color: rgba(34,27,26,0.7); }
+
+/* ─── Article columns ─── */
+.cs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 64px 0;
+  width: 896px;
+}
+
+/* ─── Section card ─── */
+.cs-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  position: relative;
+}
+.cs-section--process {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  padding: 32px;
+  border-radius: 32px;
+  background: #fff;
+}
+.cs-section__heading {
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 33.75px;
+  color: #221b1a;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.cs-section__heading strong { font-weight: 700; color: #21277c; background-color: #ddeafe; border-radius: 4px; padding: 0 3px; }
+.cs-section__heading em { font-style: normal; font-weight: 600; color: #21277c; background-color: #ddeafe; border-radius: 4px; padding: 0 3px; }
+
+/* highlight bar */
+.highlight-bar {
+  position: absolute;
+  height: 38px;
+  background: rgba(221,234,254,0.81);
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Two-col layout ─── */
+.cs-two-col {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  width: 100%;
+}
+.cs-two-col__img {
+  width: 348px;
+  min-width: 348px;
+  height: 481px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.cs-two-col__img img { width: 100%; height: 100%; object-fit: cover; }
+.cs-two-col__right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  flex: 1;
+  min-width: 0;
+  height: 477px;
+}
+
+/* blockquote cards */
+.cs-callout {
+  background: #f2f7ff;
+  border: 1px solid #ddeafe;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  justify-content: center;
+  flex: 1;
+}
+.cs-callout--full {
+  width: 100%;
+  height: 195px;
+  flex: none;
+}
+.cs-callout__icon { width: 53px; height: 53px; flex-shrink: 0; }
+.cs-callout__icon img { width: 100%; height: 100%; object-fit: contain; }
+.cs-callout p {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 29.25px;
+  color: #21277c;
+}
+
+/* body text */
+.cs-body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(34,27,26,0.8);
+}
+.cs-body p + p { margin-top: 0; }
+
+/* full-width image */
+.cs-full-img {
+  width: 100%;
+  position: relative;
+}
+.cs-full-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ─── Outcome metrics ─── */
+.cs-metrics-outer {
+  background: #e2edfc;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+.cs-metrics-grid {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.cs-outcome-card {
+  background: rgba(255,255,255,0.64);
+  border: 1px solid #ddeafe;
+  border-radius: 10px;
+  padding: 37px 25px 1px;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 278px;
+}
+.cs-outcome-card--icon { padding-top: 28px; }
+.cs-outcome-card__stat {
+  font-size: 32px;
+  font-weight: 800;
+  color: #21277c;
+  line-height: 1;
+  letter-spacing: -0.44px;
+}
+.cs-outcome-card__icon { width: 40px; height: 40px; position: relative; overflow: hidden; flex-shrink: 0; }
+.cs-outcome-card__icon img { position: absolute; top: 10%; left: 0; bottom: 10%; width: 100%; height: 80%; object-fit: contain; object-position: left center; }
+.cs-outcome-card h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(34,27,26,0.8);
+  line-height: 24px;
+  letter-spacing: -0.31px;
+}
+.cs-outcome-card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.5);
+  line-height: 26px;
+  letter-spacing: -0.31px;
+  max-width: 210px;
+}
+.cs-footnote {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(0,0,0,0.9);
+  width: 100%;
+}
+
+/* ─── Testimonial ─── */
+.cs-testimonial {
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 24px 32px;
+  width: 100%;
+}
+.cs-testimonial__video {
+  width: 243px;
+  min-width: 243px;
+  height: 525px;
+  background: #ddd;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.cs-testimonial__quote-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid rgba(230,226,225,0.5);
+  border-radius: 15px;
+  padding: 20px;
+  align-self: center;
+}
+.cs-testimonial__open-quote {
+  display: inline;
+  font-family: 'Irish Grover', cursive;
+  font-size: 150px;
+  line-height: 0;
+  color: #21277c;
+  pointer-events: none;
+  vertical-align: middle;
+  position: relative;
+  top: 0.2em;
+  margin-right: 4px;
+}
+.cs-testimonial__close-quote {
+  display: inline;
+  font-family: 'Irish Grover', cursive;
+  font-size: 150px;
+  line-height: 0;
+  color: #21277c;
+  pointer-events: none;
+  vertical-align: middle;
+  position: relative;
+  top: 0.2em;
+  margin-left: 4px;
+  transform: scaleX(-1);
+}
+.cs-testimonial__quote-text {
+  font-size: 28.182px;
+  font-weight: 300;
+  line-height: 41.477px;
+  color: rgba(34,27,26,0.7);
+  text-align: left;
+  letter-spacing: 0.3645px;
+  position: relative;
+  z-index: 1;
+  max-width: 440px;
+}
+.cs-testimonial__quote-text strong {
+  font-weight: 700;
+  color: #21277c;
+  background-color: #DDEAFE;
+  border-radius: 4px;
+  padding: 0 3px;
+}
+.cs-testimonial__cite {
+  display: block;
+  font-size: 17.205px;
+  font-weight: 300;
+  line-height: 41.477px;
+  color: rgba(34,27,26,0.5);
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+}
+.cs-testimonial__girl {
+  position: absolute;
+  right: -84px;
+  bottom: -186px;
+  width: 310px;
+  height: 322px;
+  pointer-events: none;
+  overflow: hidden;
+}
+.cs-testimonial__girl img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ─── Process section ─── */
+.cs-process-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 832px;
+}
+.cs-process-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.cs-process-block {
+  background: #fbfbfb;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+.cs-process-block__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #21277c;
+  line-height: 24px;
+  align-self: flex-start;
+}
+.cs-process-block__body {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(34,27,26,0.8);
+  line-height: 26px;
+}
+.cs-process-block__body strong { font-weight: 600; color: #221b1a; }
+
+/* discovery two-col */
+.cs-discovery-grid {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.cs-discovery-photo {
+  width: 261px;
+  min-width: 261px;
+  height: 348px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.cs-discovery-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+.cs-discovery-right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-discovery-right h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #221b1a;
+  line-height: 26px;
+}
+
+/* research problems grid */
+.cs-problems-grid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.cs-problem-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 108px;
+  text-align: center;
+}
+.cs-problem-item__icon {
+  width: 46px;
+  height: 46px;
+  background: #f2f7ff;
+  border: 1px solid #ddeafe;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 11px;
+}
+.cs-problem-item__icon img { width: 24px; height: 24px; }
+.cs-problem-item p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #221b1a;
+  line-height: 20px;
+  text-align: center;
+}
+.cs-discovery-conclusion {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(34,27,26,0.8);
+}
+
+/* ─── Picture / tabs component ─── */
+.cs-picture {
+  background: #ececec;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.cs-picture__img {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 350px;
+  position: relative;
+}
+.cs-picture__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+.cs-picture__tabs {
+  background: rgba(255,255,255,0.62);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+}
+.cs-tab {
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  border-radius: 7px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #221b1a;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+.cs-tab.active {
+  background: #21277c;
+  color: #fff;
+}
+
+/* ─── Implementation annotated section ─── */
+.cs-annotated-wrap {
+  width: 100%;
+  position: relative;
+  /* overflow: hidden; */
+  /* min-height gives space for absolutely positioned bubbles */
+  min-height: 900px;
+}
+
+.cs-phones-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 96px 0 0 0;
+  position: relative;
+  z-index: 1;
+}
+.cs-phone-shot {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 540px;
+}
+.cs-phone-shot img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+/* Speech bubbles — absolutely positioned */
+.bubble {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bubble__shape {
+  background: #fff;
+  border: 2px solid #221b1a;
+  border-radius: 16px;
+  padding: 10px 16px;
+  position: relative;
+  max-width: 200px;
+  text-align: center;
+}
+.bubble__shape::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.bubble__shape--down::after {
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 14px solid #221b1a;
+}
+.bubble__shape--down-inner::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 11px solid #fff;
+  z-index: 1;
+}
+.bubble__shape--up::after {
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 14px solid #221b1a;
+}
+.bubble__shape--up-inner::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 11px solid #fff;
+  z-index: 1;
+}
+.bubble__text {
+  font-family: 'Comic Sans MS', 'Bradley Hand', 'Segoe Print', cursive;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.3;
+}
+
+/* ─── Figma variables screenshot ─── */
+.cs-figma-vars {
+  background: #ececec;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.cs-figma-vars__img {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cs-figma-vars__img img { width: 100%; object-fit: cover; border-radius: 10px; display: block; }
+.cs-figma-vars__caption {
+  background: rgba(255,255,255,0.62);
+  border-radius: 10px;
+  padding: 22px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-figma-vars__caption span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #221b1a;
+}
+
+/* ─── Testing ─── */
+.cs-testing-highlight {
+  position: absolute;
+  left: 188px;
+  top: 180px;
+  width: 618px;
+  height: 42px;
+  background: rgba(221,234,254,0.81);
+  border-radius: 6px;
+  pointer-events: none;
+}
+.cs-testing-photos {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 430px;
+}
+.cs-testing-photo {
+  flex: 1;
+  min-width: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.cs-testing-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.cs-testing-photo--rotated {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-testing-photo--rotated img {
+  transform: rotate(90deg);
+  width: auto;
+  height: 100%;
+  max-width: none;
+}
+.cs-testing-quote {
+  background: linear-gradient(90deg, #f2f7ff 0%, #f2f7ff 100%);
+  border: 1px solid rgba(221,234,254,0.81);
+  border-radius: 10px;
+  padding: 32px;
+  width: 100%;
+}
+.cs-testing-quote p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #21277c;
+  line-height: 29.25px;
+  text-align: center;
+}
+
+/* ─── Iteration ─── */
+.cs-iteration-wrap {
+  position: relative;
+  width: 100%;
+}
+.cs-iteration-girl {
+  position: absolute;
+  right: -270px;
+  top: -210px;
+  width: 338px;
+  height: 338px;
+  pointer-events: none;
+  z-index: 2;
+}
+.cs-iteration-girl img { width: 100%; height: 100%; object-fit: cover; }
+
+.cs-picture__img--animated {
+  position: relative;
+  height: 508px;
+  border-radius: 10px;
+  background: #ececec;
+  overflow: hidden;
+}
+/* Scrollable inner track */
+.cs-iteration-scroll {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  cursor: grab;
+}
+.cs-iteration-scroll.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.cs-iteration-scroll.dragging { cursor: grabbing; }
+.cs-iteration-scroll img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  display: block;
+  border-radius: 0;
+  transform-origin: 0 0;
+  transition: transform 0.15s ease;
+  user-select: none;
+  pointer-events: none;
+}
+/* Zoom controls */
+.cs-iteration-zoom {
+  position: absolute;
+  bottom: 54px;
+  right: 12px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cs-iteration-zoom button {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #221b1a;
+  transition: background 0.15s;
+}
+.cs-iteration-zoom button:hover { background: #fff; }
+.cs-iteration-zoom button:disabled { opacity: 0.35; cursor: default; }
+.cs-iteration-zoom__reset {
+  font-size: 11px !important;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+/* ─── Solution ─── */
+.cs-solution-section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+  padding: 32px;
+  width: 100%;
+  position: relative;
+}
+.cs-solution__highlight {
+  position: absolute;
+  height: 38px;
+  background: rgba(221,234,254,0.81);
+  border-radius: 6px;
+  pointer-events: none;
+}
+.cs-solution-body {
+  position: relative;
+  width: 832px;
+}
+.cs-solution-body__highlight-1 {
+  position: absolute;
+  background: rgba(221,234,254,0.81);
+  height: 29px;
+  left: 298px;
+  top: -2px;
+  width: 482px;
+  border-radius: 6px;
+  pointer-events: none;
+}
+.cs-solution-body__highlight-2 {
+  position: absolute;
+  background: rgba(221,234,254,0.81);
+  height: 29px;
+  left: 1px;
+  top: 23px;
+  width: 254px;
+  border-radius: 6px;
+  pointer-events: none;
+}
+.cs-solution-body p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(34,27,26,0.8);
+  position: relative;
+  z-index: 1;
+}
+.cs-solution-body strong { font-weight: 700; color: #21277c; background-color: #ddeafe; border-radius: 4px; padding: 0 3px; }
+
+.cs-solution-cards {
+  display: flex;
+  gap: 10px;
+  width: 832px;
+  background: rgba(221,234,254,0.81);
+  border-radius: 10px;
+  padding: 10px;
+}
+.cs-solution-card {
+  background: rgba(255,255,255,0.64);
+  border: 1px solid #ddeafe;
+  border-radius: 10px;
+  padding: 25px 25px 20px;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cs-solution-card__icon { width: 40px; height: 40px; flex-shrink: 0; }
+.cs-solution-card__icon img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+.cs-solution-card h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(34,27,26,0.8);
+  line-height: 24px;
+}
+.cs-solution-card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.5);
+  line-height: 20px;
+}
+
+/* ─── Retrospective ─── */
+.cs-retro-section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  position: relative;
+}
+.cs-retro-section__heading {
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 33.75px;
+  color: #221b1a;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.cs-retro-section__heading strong { font-weight: 600; color: #21277c; background-color: #ddeafe; border-radius: 4px; padding: 0 3px; }
+.cs-retro-grid {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  background: #e2edfc;
+  border-radius: 10px;
+  padding: 10px;
+}
+.cs-retro-card {
+  background: rgba(255,255,255,0.64);
+  border: 1px solid #ddeafe;
+  border-radius: 10px;
+  padding: 20px 25px 25px;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 200px;
+}
+.cs-retro-card h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(34,27,26,0.8);
+  line-height: 24px;
+  letter-spacing: -0.31px;
+}
+.cs-retro-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cs-retro-card ul li {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.5);
+  line-height: 26px;
+  letter-spacing: -0.31px;
+  padding-left: 0;
+  position: relative;
+}
+.cs-retro-card ul li::before {
+  content: none;
+}
+.cs-retro-icon--shift { margin-left: -5px; }
+.cs-retro-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-left: 0;
+}
+
+.cs-retro-girl {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  width: 180px;
+  height: 240px;
+  pointer-events: none;
+  z-index: 5;
+}
+.cs-retro-girl img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ─── Say Hey CTA ─── */
+.cs-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 31px 32px;
+  margin: 64px 0 0;
+  width: 100%;
+  background: #f8f8f8;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.cs-cta__hey {
+  font-size: 48px;
+  font-weight: 800;
+  font-style: normal;
+  background: linear-gradient(90deg, #000592, #b9e0ff 85.096%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+.cs-cta__sub {
+  font-size: 18px;
+  font-weight: 400;
+  color: #5b5b5b;
+  line-height: 29.25px;
+  max-width: 525px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #21277c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.3125px;
+  padding: 12px 54px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+}
+.btn-primary:hover { background: #1a1f63; }
+
+/* ─── Footer ─── */
+.cs-footer {
+  width: 100%;
+  padding: 24px 32px;
+  border-top: 1px solid #e6e2e1;
+  display: flex;
+  justify-content: flex-start;
+}
+.cs-footer__link {
+  font-size: 14px;
+  color: #21277c;
+  text-decoration: none;
+}
+.cs-footer__link:hover { text-decoration: underline; }
+
+/* Annotation overlays */
+.ann-wrap { position:relative; overflow:visible; }
+.ann { position:absolute; overflow:visible; }
+.ann-inner { position:relative; width:100%; height:100%; }
+.ann-layer { position:absolute; top:0; left:0; display:block; overflow:visible; }
+.ann-layer svg { display:block; width:100%; height:100%; overflow:visible; }
+.ann-text {
+  position:absolute;
+  font-family:'Bradley Hand ITC','Bradley Hand',cursive;
+  font-size:19px;
+  font-weight:bold;
+  color:#000;
+  text-align:center;
+  line-height:1.3;
+  pointer-events:none;
+  white-space:nowrap;
+}
+.sparkle { position:absolute; overflow:visible; }
+.sparkle svg { display:block; }
+
+</style>
+</head>
+<body>
+
+<!-- ─── Navigation ─── -->
+<header class="nav">
+  <a href="index.html" class="nav__logo">
+    <svg class="nav__logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd"/>
+    </svg>
+    Home
+  </a>
+  <nav class="nav__links">
+    <a href="index.html#work">My Work</a>
+    <a href="index.html#about">About Me</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="case-study">
+
+  <!-- ─── Hero ─── -->
+  <section class="cs-hero">
+    <div class="cs-hero__device">
+      <img src="https://www.figma.com/api/mcp/asset/f5a6b131-6152-4d12-a636-bc44498e6075" alt="Lion Energy technician app home screen">
+    </div>
+    <div class="cs-hero__copy">
+      <div class="cs-hero__stat-row">
+        <img src="assets/icon-arrow-trend-up.svg" alt="Trend up">
+        <span class="cs-hero__stat">233%</span>
+      </div>
+      <h1 class="cs-hero__heading">Increase in company sales through mobile app design</h1>
+      <span class="pill">Lion Energy</span>
+    </div>
+  </section>
+
+  <!-- ─── Meta bar ─── -->
+  <div class="cs-meta">
+    <div class="cs-meta__item">
+      <div class="cs-meta__icon">
+        <img src="assets/Property 1=clock-solid-full 1.png" alt="">
+      </div>
+      <div class="cs-meta__text">
+        <span class="cs-meta__label">Timeline</span>
+        <span class="cs-meta__value">6 months | 2024-25</span>
+      </div>
+    </div>
+    <div class="cs-meta__item">
+      <div class="cs-meta__icon">
+        <img src="assets/Property 1=briefcase-solid-full 1.png" alt="">
+      </div>
+      <div class="cs-meta__text">
+        <span class="cs-meta__label">Role</span>
+        <span class="cs-meta__value">Lead UX/UI Designer | Researcher</span>
+      </div>
+    </div>
+    <div class="cs-meta__item" style="width:225px">
+      <div class="cs-meta__icon">
+        <img src="assets/Property 1=screwdriver-wrench-solid-full 1.png" alt="">
+      </div>
+      <div class="cs-meta__text">
+        <span class="cs-meta__label">Tools</span>
+        <span class="cs-meta__value">Figma | Log Rocket | Chat GPT</span>
+      </div>
+    </div>
+    <div class="cs-meta__item">
+      <div class="cs-meta__icon">
+        <img src="assets/Property 1=arrows-down-to-people-solid-full 1.png" alt="">
+      </div>
+      <div class="cs-meta__text">
+        <span class="cs-meta__label">Team</span>
+        <span class="cs-meta__value">2 Designers | 2 Engineers | 1 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Content column ─── -->
+  <div class="cs-content">
+
+    <!-- Background -->
+    <section class="cs-section">
+      <div style="width:100%; display:flex; justify-content:center;">
+        <span class="pill">Background</span>
+      </div>
+      <p class="cs-section__heading">
+        Lion Energy <em>develops sustainable energy</em> storage solutions.
+      </p>
+      <div class="cs-two-col">
+        <div class="cs-two-col__img" style="width:370px; min-width:370px; height:auto; align-self:stretch;">
+          <img src="https://www.figma.com/api/mcp/asset/ba04657e-9eb3-4afa-96de-4a800639ceef" alt="Lion Energy outdoor installation" style="width:100%; height:100%; object-fit:cover; object-position:95% center;">
+        </div>
+        <div class="cs-two-col__right" style="height:auto;">
+          <div class="cs-callout" style="flex:none; justify-content:center; align-items:center;">
+            <p style="text-align:center;">Lion Energy was running short on time. Without an effective solution to empower installers, partnerships would continue falling&nbsp;apart.</p>
+          </div>
+          <div class="cs-body">
+            <p>Lion Energy empowers third party partners to hire installers that can bring energy solutions into established and new residential homes each year.</p>
+            <br>
+            <p>Technicians were struggling with the complex process of programming and commissioning home battery units on-site. This was a pressing issue that needed addressing in order to expand Lion Energy's  reach and increase revenue.</p>
+          </div>
+          <div class="cs-callout" style="height:127px; flex:none; justify-content:center; align-items:center;">
+            <p style="text-align:center;">What should have been a 10-minute setup often took hours, resulting in repeat visits, broken product, and frustrated partners.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="cs-section">
+      <div style="width:100%; display:flex; justify-content:center;">
+        <span class="pill">Problem</span>
+      </div>
+      <p class="cs-section__heading" style="text-align:center; width:832px;">
+        Lion Energy <strong>was losing both existing and potential partnerships</strong> at a rapid rate.
+      </p>
+      <div class="cs-body" style="width:100%;">
+        <p>The original commissioning experience existed only as a web-based application designed for use on laptops. However, in the field, most technicians worked exclusively on mobile devices. Expecting partnerships to provide and maintain laptops added friction, costs, and ultimately caused lost deals.</p>
+        <br>
+        <p>To further business implications, incorrect system setup was unacceptably common. This resulted in multiple field visits to the same home - to fix configuration errors. Each error meant wasted time, additional labor costs, and a poor experience for both the technician and homeowner.</p>
+      </div>
+    </section>
+
+    <!-- Old desktop screenshot -->
+    <!-- Old desktop screenshot -->
+    <div class="cs-problem-image">
+      <img src="assets/UX/Group 8.png" alt="Old platform showing issues: multi-colored text, English only, diagrams lacking context, and text running off the page" style="max-width:100%; height:auto;">
+    </div>
+
+    <!-- Outcome -->
+    <section class="cs-section">
+      <div style="width:100%; display:flex; justify-content:center;">
+        <span class="pill">Outcome</span>
+      </div>
+      <div class="cs-metrics-outer">
+        <div class="cs-metrics-grid">
+          <div class="cs-outcome-card">
+            <div class="cs-outcome-card__stat">233%</div>
+            <h4>Increase in Monthly Sales</h4>
+            <p>The app aided in closing a partnership within the first month of it's official launch which increased revenue significantly</p>
+          </div>
+          <div class="cs-outcome-card cs-outcome-card--icon">
+            <div class="cs-outcome-card__icon">
+              <img src="assets/Property 1=bus-simple-solid-full 1.png" alt="">
+            </div>
+            <h4>Decreased Field Visits</h4>
+            <p>Decreased repeat field visits through more detailed instructions which lowered mistakes</p>
+          </div>
+          <div class="cs-outcome-card">
+            <div class="cs-outcome-card__stat">95%</div>
+            <h4>Increase in App Adoption</h4>
+            <p>Adoption of app usage skyrocketed once Spanish translations were incorporated to the product</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <div class="cs-testimonial">
+      <div class="cs-testimonial__video">
+        <video src="assets/Tech app emsc updates.mp4" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; border-radius:16px;"></video>
+      </div>
+      <div class="cs-testimonial__quote-wrap">
+        <p class="cs-testimonial__quote-text">
+          <span class="cs-testimonial__open-quote">&ldquo;</span><strong>This app has been a God send</strong> for everyone involved to get a job done faster and more efficiently.<span class="cs-testimonial__close-quote">&rdquo;</span>
+        </p>
+        <span class="cs-testimonial__cite">Lion Energy Sales Specialist</span>
+        <div class="cs-testimonial__girl">
+          <img src="https://www.figma.com/api/mcp/asset/96faf5ed-6796-415d-9d5f-3849126d8b5a" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- Process -->
+    <section class="cs-section--process">
+
+      <div class="cs-process-container">
+        <div class="cs-process-label">
+          <span class="pill" style="align-self: center;">Process</span>
+        </div>
+
+        <!-- Discovery -->
+        <div class="cs-process-block">
+          <p class="cs-process-block__title">Discovery</p>
+          <p class="cs-process-block__body">
+            I began by immersing myself into the current product. I reviewed the web-based product and conducted interviews with knowledgable internal employees. Through this I came to fully understand the environment, the challenges, and the situations technicians experience during inverter and battery installation.
+          </p>
+          <div class="cs-discovery-grid">
+            <div class="cs-discovery-photo">
+              <img src="https://www.figma.com/api/mcp/asset/63972ed6-4a25-4545-ae83-3a02f7d1ddae" alt="Research session photo">
+            </div>
+            <div class="cs-discovery-right">
+              <h4>Research Revealed Common Problems</h4>
+              <div class="cs-problems-grid">
+                <div class="cs-problem-item">
+                  <div class="cs-problem-item__icon">
+                    <img src="assets/Property 1=square-check-solid-full 1.png" alt="">
+                  </div>
+                  <p>Step Completed Incorrectly</p>
+                </div>
+                <div class="cs-problem-item">
+                  <div class="cs-problem-item__icon">
+                    <img src="assets/Property 1=readme-brands-solid-full 1.png" alt="">
+                  </div>
+                  <p>Overgeneralized Instructions</p>
+                </div>
+                <div class="cs-problem-item">
+                  <div class="cs-problem-item__icon">
+                    <img src="assets/Property 1=image-solid-full 1.png" alt="">
+                  </div>
+                  <p>Users Relied on Visuals</p>
+                </div>
+                <div class="cs-problem-item">
+                  <div class="cs-problem-item__icon">
+                    <img src="assets/Property 1=file-circle-exclamation-solid-full 1.png" alt="">
+                  </div>
+                  <p>Insufficient Error Handeling</p>
+                </div>
+              </div>
+              <div class="cs-callout" style="justify-content:center; align-items:center;">
+                <p style="text-align:center;">This discovery defined that for long term success Lion Energy needed a mobile platform with clarified instruction and detailed visuals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Implementation -->
+        <div class="cs-process-block" style="overflow:visible;">
+          <p class="cs-process-block__title">Implementation</p>
+          <p class="cs-process-block__body">
+            I started with low-fidelity wireframes within Figma to validate flow logic then progressed to high-fidelity mockups that aligned with Lion Energy's newly published design system.
+          </p>
+
+          <!-- Annotated phone screenshots — exported from Figma -->
+          <img src="assets/UX/Frame 3346.png" alt="Annotated app screenshots showing Spanish language support, detailed diagrams, specific instructions, intentional friction points, large tap targets, progress bar, and new platform" style="width:100%;display:block;">
+          <div style="display:none;" class="cs-annotated-wrap">
+
+            <!-- Phone screenshots row -->
+            <div style="padding-top:90px; display:flex; align-items:flex-start; justify-content:center; gap:10px;">
+              <div style="position:relative; height:540px; width:250px; flex-shrink:0; border-radius:12px; overflow:hidden;">
+                <img src="https://www.figma.com/api/mcp/asset/33ef53a7-a3cc-445c-be10-31523a82a322" alt="App screenshot — step-by-step instructions" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div style="position:relative; height:540px; width:252px; flex-shrink:0; border-radius:12px; overflow:hidden;">
+                <img src="https://www.figma.com/api/mcp/asset/ba204bc2-8a46-41fe-a07b-1960450013f8" alt="App screenshot — spanish support" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div style="position:relative; height:555px; width:254px; flex-shrink:0; border-radius:12px; overflow:hidden;">
+                <img src="https://www.figma.com/api/mcp/asset/00cace17-9a1d-4fa0-a7c9-56c43514555b" alt="App screenshot — progress bar" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+            </div>
+
+            <!-- ── Spanish Language Support (Union rotate-180 → oval at top, tail at bottom-right) ── -->
+            <div style="position:absolute;top:0;left:5px;width:253px;height:211px;pointer-events:none;">
+              <img src="https://www.figma.com/api/mcp/asset/220927ec-9cc8-44b9-994d-9fdf09e19c98" alt=""
+                   style="position:absolute;inset:0;width:100%;height:100%;transform:rotate(180deg);">
+              <p style="position:absolute;top:16px;left:50%;transform:translateX(-50%);width:160px;
+                         text-align:center;font-family:'Comic Sans MS','Bradley Hand','Segoe Print',cursive;
+                         font-size:22px;font-weight:700;color:#000;line-height:1.35;margin:0;">
+                Spanish Language<br>Support
+              </p>
+            </div>
+
+            <!-- ── New Platform: sparkle assets + rotated oval ── -->
+            <img src="https://www.figma.com/api/mcp/asset/3fdae410-ee21-4db7-8488-76e9573da75e" alt=""
+                 style="position:absolute;top:-4px;left:268px;width:28px;pointer-events:none;">
+            <img src="https://www.figma.com/api/mcp/asset/3fdae410-ee21-4db7-8488-76e9573da75e" alt=""
+                 style="position:absolute;top:68px;left:254px;width:28px;pointer-events:none;">
+            <img src="https://www.figma.com/api/mcp/asset/3fdae410-ee21-4db7-8488-76e9573da75e" alt=""
+                 style="position:absolute;top:-4px;left:534px;width:28px;pointer-events:none;">
+            <div style="position:absolute;top:-12px;left:274px;width:260px;height:165px;pointer-events:none;">
+              <img src="https://www.figma.com/api/mcp/asset/0308aca6-59fc-46db-a555-962b9148eacb" alt=""
+                   style="position:absolute;top:22px;left:22px;width:210px;height:113px;
+                          transform:rotate(160.64deg);transform-origin:center center;">
+              <p style="position:absolute;top:52px;left:50%;
+                         transform:translateX(-50%) rotate(-19.17deg);
+                         width:160px;text-align:center;
+                         font-family:'Comic Sans MS','Bradley Hand','Segoe Print',cursive;
+                         font-size:22px;font-weight:700;color:#000;line-height:1.35;margin:0;white-space:nowrap;">
+                New Platform
+              </p>
+            </div>
+
+            <!-- ── Specific Instructions (Union rotate-180 → oval at top, tail at bottom) ── -->
+            <div style="position:absolute;top:15px;right:0;width:210px;height:190px;pointer-events:none;">
+              <img src="https://www.figma.com/api/mcp/asset/829403e8-6f24-43d6-8c73-0b58793e460b" alt=""
+                   style="position:absolute;inset:0;width:100%;height:100%;transform:rotate(180deg);">
+              <p style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:148px;
+                         text-align:center;font-family:'Comic Sans MS','Bradley Hand','Segoe Print',cursive;
+                         font-size:22px;font-weight:700;color:#000;line-height:1.35;margin:0;">
+                Specific<br>Instructions
+              </p>
+            </div>
+
+            <!-- ── Detailed Diagrams (Union rotate-180 → oval on right, tail points left) ── -->
+            <div style="position:absolute;top:248px;left:558px;width:225px;height:156px;pointer-events:none;">
+              <img src="https://www.figma.com/api/mcp/asset/98cec4ab-ce1b-4a34-8c04-8ff4e88c7d48" alt=""
+                   style="position:absolute;inset:0;width:100%;height:100%;transform:rotate(180deg);">
+              <p style="position:absolute;top:32px;left:58%;transform:translateX(-50%);width:130px;
+                         text-align:center;font-family:'Comic Sans MS','Bradley Hand','Segoe Print',cursive;
+                         font-size:22px;font-weight:700;color:#000;line-height:1.35;margin:0;">
+                Detailed<br>Diagrams
+              </p>
+            </div>
+
+            <!-- ── Intentional Friction Points (Union scaleY(-1) → oval at top, tail at bottom-right) ── -->
+            <div style="position:absolute;top:415px;left:-22px;width:210px;height:190px;pointer-events:none;">
+              <img src="https://www.figma.com/api/mcp/asset/987aeb2a-245a-47ab-960d-866bc1d0c10c" alt=""
+                   style="position:absolute;inset:0;width:100%;height:100%;transform:scaleY(-1);">
+              <p style="position:absolute;top:16px;left:50%;transform:translateX(-50%);width:150px;
+                         text-align:center;font-family:'Comic Sans MS','Bradley Hand','Segoe Print',cursive;
+                         font-size:22px;font-weight:700;color:#000;line-height:1.35;margin:0;">
+                Intentional<br>Friction Points
+              </p>
+            </div>
+
+            <!-- ── Large Tap Targets (Union scaleX(-1) → oval at bottom, tail points up-right) ── -->
+            <div style="position:absolute;top:665px;left:320px;width:231px;height:208px;pointer-events:none;">
+              <img src="https://www.figma.com/api/mcp/asset/29bb4372-8174-48f9-97f1-b604c002fcef" alt=""
+                   style="position:absolute;inset:0;width:100%;height:100%;transform:scaleX(-1);">
+              <p style="position:absolute;top:88px;left:50%;transform:translateX(-50%);width:165px;
+                         text-align:center;font-family:'Comic Sans MS','Bradley Hand','Segoe Print',cursive;
+                         font-size:22px;font-weight:700;color:#000;line-height:1.35;margin:0;">
+                Large Tap Targets<br>For Multitasking<br>Users
+              </p>
+            </div>
+
+            <!-- ── Progress Bar For Way-finding (Union scaleX(-1) → oval at bottom, tail points up) ── -->
+            <div style="position:absolute;top:655px;right:5px;width:216px;height:237px;pointer-events:none;">
+              <img src="https://www.figma.com/api/mcp/asset/57307fe3-0115-4903-9dbb-03dd0869fccf" alt=""
+                   style="position:absolute;inset:0;width:100%;height:100%;transform:scaleX(-1);">
+              <p style="position:absolute;top:112px;left:50%;transform:translateX(-50%);width:155px;
+                         text-align:center;font-family:'Comic Sans MS','Bradley Hand','Segoe Print',cursive;
+                         font-size:22px;font-weight:700;color:#000;line-height:1.35;margin:0;">
+                Progress Bar<br>For Way-finding
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Figma variables screenshot -->
+          <div class="cs-figma-vars">
+            <div class="cs-figma-vars__img">
+              <img src="https://www.figma.com/api/mcp/asset/8328288e-763f-47ca-abbc-e2f422f4201a" alt="Spanish/English variables in Figma">
+            </div>
+            <div class="cs-figma-vars__caption">
+              <span>Some of the Spanish/English Variables Created in Figma</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Testing -->
+        <div class="cs-process-block" style="overflow:visible; position:relative;">
+          <p class="cs-process-block__title">Testing</p>
+          <p class="cs-process-block__body">
+            As an advocate for research, I pushed for testing to be conducted with field technicians. Unfortunately, this was denied multiple times due to budget constraints. I conducted internal usability walkthroughs with in-house engineers, product managers, and Spanish-speaking support staff who closely understood field conditions.
+          </p>
+          <p class="cs-process-block__body">
+            Even within the limits, <strong style="color:#21277c; background-color:#ddeafe; border-radius:4px; padding:0 3px;">we were able to identify usability gaps early in the process and refine accordingly.</strong>
+          </p>
+          <div style="position:relative;">
+            <img src="https://www.figma.com/api/mcp/asset/4fc7a100-7b0d-47fa-850b-0fb2c67f1b39" alt="" style="position:absolute; left:-230px; top:-130px; width:350px; pointer-events:none; z-index:2;">
+          <div class="cs-testing-photos">
+            <div class="cs-testing-photo">
+              <img src="https://www.figma.com/api/mcp/asset/e020d935-98e8-4b8a-9957-1912971c8a1c" alt="Technician commissioning Lion Energy unit" style="object-position: center;">
+            </div>
+            <div class="cs-testing-photo cs-testing-photo--rotated">
+              <img src="https://www.figma.com/api/mcp/asset/668ce3d3-c5c7-4e8d-a5be-59410bf41bf0" alt="Technician working on battery installation" style="transform: rotate(-270deg) scale(0.62);">
+            </div>
+            <div class="cs-testing-photo cs-testing-photo--rotated">
+              <img src="https://www.figma.com/api/mcp/asset/7eaac8de-e61e-470e-9f5e-16ad4c90149e" alt="Technician inspecting Lion Energy setup" style="transform: rotate(-270deg) scale(0.62);">
+            </div>
+          </div>
+          </div>
+          <div class="cs-testing-quote">
+            <p>We tested both low-fidelity clickthroughs and interactive high-fidelity prototypes, focusing on error prevention, comprehension, and flow speed.</p>
+          </div>
+        </div>
+
+        <!-- Iteration -->
+        <div class="cs-process-block" style="overflow:visible;">
+          <p class="cs-process-block__title">Iteration</p>
+          <p class="cs-process-block__body">
+            After launch, I have continued to refine the product based on post-release feedback from internal experts and partner installers. Small UI tweaks, clearer diagram labeling, and improved translation consistency were released in follow-up updates.
+          </p>
+          <!-- App iterations tabs — girl illustration absolutely positioned -->
+          <div class="cs-iteration-wrap">
+            <div class="cs-picture" id="iteration-picture">
+              <div class="cs-picture__img--animated" id="iteration-img-wrap">
+                <div class="cs-iteration-scroll visible" data-index="0"><img src="assets/iteration-1.png" alt="App iteration 1"></div>
+                <div class="cs-iteration-scroll" data-index="1"><img src="assets/iteration-2.png" alt="App iteration 2"></div>
+                <div class="cs-iteration-scroll" data-index="2"><img src="assets/iteration-3.png" alt="App iteration 3"></div>
+                <div class="cs-iteration-scroll" data-index="3"><img src="assets/iteration-4.png" alt="App iteration 4"></div>
+                <div class="cs-iteration-scroll" data-index="4"><img src="assets/iteration-5.png" alt="App iteration 5"></div>
+                <div class="cs-iteration-zoom">
+                  <button id="iter-zoom-in" title="Zoom in">+</button>
+                  <button id="iter-zoom-out" title="Zoom out">−</button>
+                  <button id="iter-zoom-reset" class="cs-iteration-zoom__reset" title="Reset zoom">1:1</button>
+                </div>
+              </div>
+              <div class="cs-picture__tabs" id="iteration-tabs">
+                <button class="cs-tab active" data-index="0">App Iteration 1</button>
+                <button class="cs-tab" data-index="1">App Iteration 2</button>
+                <button class="cs-tab" data-index="2">App Iteration 3</button>
+                <button class="cs-tab" data-index="3">App Iteration 4</button>
+                <button class="cs-tab" data-index="4">App Iteration 5</button>
+              </div>
+            </div>
+            <!-- Girl illustration — absolutely positioned, ignores flow -->
+            <div class="cs-iteration-girl">
+              <img src="https://www.figma.com/api/mcp/asset/2136d515-c871-4bfa-97d4-3b9c432eda4c" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /cs-process-container -->
+    </section><!-- /cs-section--process -->
+
+    <!-- Solution -->
+    <section class="cs-solution-section">
+      <div style="width:832px; display:flex; justify-content:center;">
+        <span class="pill">Solution</span>
+      </div>
+      <p style="font-size:27px; font-weight:300; line-height:33.75px; color:#221b1a; text-align:center; width:828px;">
+        The solution centered around on <strong style="font-weight:600; color:#21277c; background-color:#ddeafe; border-radius:4px; padding:0 3px;">three strategic</strong> changes
+      </p>
+      <div class="cs-solution-body" style="width:832px;">
+        <p style="font-size:16px; line-height:24px; color:rgba(34,27,26,0.8);">
+          I designed a mobile-first application that <strong style="color:#21277c; background-color:#ddeafe; border-radius:4px; padding:0 3px;">transformed the complex commissioning process into a simple, guided, step-by-step experience</strong> comprehensive for electricians and homeowners alike. The app walks technicians through the entire commissioning flow, from initial setup to final verification. Each step includes expected device states, troubleshooting guidance, and validation checks to prevent errors before they occur.
+        </p>
+      </div>
+      <div class="cs-solution-cards">
+        <div class="cs-solution-card">
+          <div class="cs-solution-card__icon">
+            <img src="assets/Property 1=mobile-button-solid-full 1.png" alt="" style="margin-left: -8px;">
+          </div>
+          <h4>Mobile Design</h4>
+          <p>Mobile application optimized tools for field use, eliminating the need for laptops and the extra expenses that came with.</p>
+        </div>
+        <div class="cs-solution-card">
+          <div class="cs-solution-card__icon">
+            <img src="assets/Property 1=eye-solid-full 1.png" alt="">
+          </div>
+          <h4>Visual Guidance</h4>
+          <p>Specific visual diagrams offered technicians support through the 16 potential set-up scenarios.</p>
+        </div>
+        <div class="cs-solution-card">
+          <div class="cs-solution-card__icon">
+            <img src="assets/Property 1=Variant15.png" alt="">
+          </div>
+          <h4>Bilingual Support</h4>
+          <p>Full Spanish language support enabled Lion Energy to reach a wider network of field technicians.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Retrospective -->
+    <section class="cs-retro-section">
+      <p class="cs-retro-section__heading">
+        Looking back on the project, there are <strong>several lessons I learned</strong> to carry forward into future work.
+      </p>
+      <div style="position:relative; width:100%;">
+      <img src="https://www.figma.com/api/mcp/asset/35e4d4a9-33b0-4343-b0aa-51aa9a25dca5" alt="" style="width:350px; position:absolute; bottom:0; left:-250px; z-index:2; pointer-events:none;">
+      <div class="cs-retro-grid">
+        <div class="cs-retro-card">
+          <img class="cs-retro-icon cs-retro-icon--shift" src="assets/Property 1=square-check-solid-full 1.png" alt="">
+          <h4>What Went Well</h4>
+          <ul>
+            <li>Clear visual language and bilingual translation system</li>
+            <li>Decreased installation time through instructions</li>
+            <li>Customizing instructions to match various set-up scenarios</li>
+          </ul>
+        </div>
+        <div class="cs-retro-card">
+          <img class="cs-retro-icon" src="assets/icon-arrow-trend-up.svg" alt="">
+          <h4>What Could Have Been Better</h4>
+          <ul>
+            <li>Memory storage within the Figma file kept filling up</li>
+            <li>Earlier involvement with engineering to streamline handoff process</li>
+            <li>Budget constraints prevented testing on real field technicians</li>
+          </ul>
+        </div>
+        <div class="cs-retro-card">
+          <img class="cs-retro-icon cs-retro-icon--shift" src="assets/Property 1=lightbulb-solid-full 1.png" alt="">
+          <h4>Key Takeaways</h4>
+          <ul>
+            <li>Good design directly impacts business outcomes</li>
+            <li>Constraints are opportunities for creative problem solving</li>
+            <li>Good documentation promotes efficiency</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </div><!-- /cs-content -->
+
+  <!-- ─── Say Hey CTA ─── -->
+  <section class="cs-cta" style="width: calc(100% - 26px); margin: 0 13px 64px;">
+    <h2 class="cs-cta__hey">Say hey!</h2>
+    <p class="cs-cta__sub">Working on something exciting? Let's connect! I would love to hear about it!</p>
+    <a href="index.html#contact" class="btn-primary">Contact</a>
+  </section>
+
+</main>
+
+<!-- ─── Footer ─── -->
+
+<script>
+  // Tab switching for Picture components (discovery section)
+  document.querySelectorAll('.cs-picture__tabs').forEach(tabGroup => {
+    if (tabGroup.id === 'iteration-tabs') return; // handled separately
+    const tabs = tabGroup.querySelectorAll('.cs-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+  });
+
+  // ── Iteration viewer: tabs + zoom + pan ──────────────────────────
+  const iterationTabs = document.querySelectorAll('#iteration-tabs .cs-tab');
+  const iterationWrap = document.getElementById('iteration-img-wrap');
+  const MIN_SCALE = 1, MAX_SCALE = 4, STEP = 0.5;
+
+  // Per-panel zoom/pan state
+  const state = Array.from({length: 5}, () => ({ scale: 1, tx: 0, ty: 0 }));
+
+  function clampTranslate(s, panel) {
+    const img = panel.querySelector('img');
+    const pw = panel.offsetWidth, ph = panel.offsetHeight;
+    const iw = img.naturalWidth  || img.offsetWidth  * s.scale;
+    const ih = img.naturalHeight || img.offsetHeight * s.scale;
+    const scaledW = (img.offsetWidth  || pw) * s.scale;
+    const scaledH = (img.offsetHeight || ph) * s.scale;
+    const maxTx = 0, minTx = Math.min(0, pw - scaledW);
+    const maxTy = 0, minTy = Math.min(0, ph - scaledH);
+    s.tx = Math.max(minTx, Math.min(maxTx, s.tx));
+    s.ty = Math.max(minTy, Math.min(maxTy, s.ty));
+  }
+
+  function applyTransform(panel) {
+    const idx = parseInt(panel.dataset.index, 10);
+    const s = state[idx];
+    const img = panel.querySelector('img');
+    img.style.transform = `translate(${s.tx}px, ${s.ty}px) scale(${s.scale})`;
+    // Disable transition during drag for snappiness
+    img.style.transition = panel.classList.contains('dragging') ? 'none' : 'transform 0.15s ease';
+    updateZoomButtons(s.scale);
+  }
+
+  function updateZoomButtons(scale) {
+    document.getElementById('iter-zoom-in').disabled  = scale >= MAX_SCALE;
+    document.getElementById('iter-zoom-out').disabled = scale <= MIN_SCALE;
+  }
+
+  function getActivePanel() {
+    return iterationWrap.querySelector('.cs-iteration-scroll.visible');
+  }
+
+  function zoomBy(delta, panel) {
+    const idx = parseInt(panel.dataset.index, 10);
+    const s = state[idx];
+    const pw = panel.offsetWidth, ph = panel.offsetHeight;
+    const cx = pw / 2, cy = ph / 2;
+    const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, s.scale + delta));
+    // Zoom towards center
+    const ratio = newScale / s.scale;
+    s.tx = cx + (s.tx - cx) * ratio;
+    s.ty = cy + (s.ty - cy) * ratio;
+    s.scale = newScale;
+    if (s.scale === MIN_SCALE) { s.tx = 0; s.ty = 0; }
+    clampTranslate(s, panel);
+    applyTransform(panel);
+  }
+
+  // Zoom buttons
+  document.getElementById('iter-zoom-in').addEventListener('click', () => {
+    zoomBy(+STEP, getActivePanel());
+  });
+  document.getElementById('iter-zoom-out').addEventListener('click', () => {
+    zoomBy(-STEP, getActivePanel());
+  });
+  document.getElementById('iter-zoom-reset').addEventListener('click', () => {
+    const panel = getActivePanel();
+    const idx = parseInt(panel.dataset.index, 10);
+    state[idx] = { scale: 1, tx: 0, ty: 0 };
+    applyTransform(panel);
+  });
+
+  // Mouse wheel zoom (only when Ctrl/Cmd held; otherwise let page scroll)
+  iterationWrap.addEventListener('wheel', e => {
+    if (!e.ctrlKey && !e.metaKey) return;
+    e.preventDefault();
+    const panel = getActivePanel();
+    const idx = parseInt(panel.dataset.index, 10);
+    const s = state[idx];
+    const rect = panel.getBoundingClientRect();
+    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    const delta = e.deltaY < 0 ? +STEP : -STEP;
+    const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, s.scale + delta));
+    const ratio = newScale / s.scale;
+    s.tx = mx + (s.tx - mx) * ratio;
+    s.ty = my + (s.ty - my) * ratio;
+    s.scale = newScale;
+    if (s.scale === MIN_SCALE) { s.tx = 0; s.ty = 0; }
+    clampTranslate(s, panel);
+    applyTransform(panel);
+  }, { passive: false });
+
+  // Drag to pan (works at all zoom levels; vertical pan only when zoomed in)
+  let drag = null;
+  iterationWrap.addEventListener('mousedown', e => {
+    if (e.button !== 0) return;
+    const panel = getActivePanel();
+    const idx = parseInt(panel.dataset.index, 10);
+    drag = { panel, idx, startX: e.clientX, startY: e.clientY,
+              origTx: state[idx].tx, origTy: state[idx].ty };
+    panel.classList.add('dragging');
+    e.preventDefault();
+  });
+  window.addEventListener('mousemove', e => {
+    if (!drag) return;
+    const s = state[drag.idx];
+    s.tx = drag.origTx + (e.clientX - drag.startX);
+    s.ty = drag.origTy + (e.clientY - drag.startY);
+    clampTranslate(s, drag.panel);
+    applyTransform(drag.panel);
+  });
+  window.addEventListener('mouseup', () => {
+    if (!drag) return;
+    drag.panel.classList.remove('dragging');
+    drag = null;
+  });
+
+  // Tab switching — reset zoom on switch
+  iterationTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const idx = parseInt(tab.dataset.index, 10);
+      iterationTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const current = iterationWrap.querySelector('.cs-iteration-scroll.visible');
+      const next = iterationWrap.querySelector(`.cs-iteration-scroll[data-index="${idx}"]`);
+      if (current === next) return;
+      current.classList.remove('visible');
+      next.classList.add('visible');
+      updateZoomButtons(state[idx].scale);
+    });
+  });
+</script>
+
+</body>
+</html>
